@@ -28,7 +28,7 @@ public class Fileopds
                 }
             }
         }
-        logger.info(""+hmap.clone());
+        logger.log(Level.INFO,()->""+hmap.clone());
         logger.info("Total No of Words in the File"+count);
         queue.addAll(hmap.entrySet());
         for(Map.Entry<String, Integer> que:queue) {
