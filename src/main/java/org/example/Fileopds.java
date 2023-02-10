@@ -14,7 +14,7 @@ public class Fileopds
         int count = 0;
         HashMap<String, Integer> hmap = new HashMap<String, Integer>();
         Queue<Map.Entry<String,Integer>> queue=new PriorityQueue<>((a,b)->{return b.getValue()-a.getValue();});
-        FileReader fr = new FileReader("C:\\Users\\Tringapps-User8\\IdeaProjects\\Fileoperation\\src\\main\\java\\org\\example\\student.txt");
+        FileReader fr = new FileReader("C:\\Users\\Tringapps-User8\\IdeaProjects\\Fileopds\\src\\main\\java\\org\\example\\student.txt");
         BufferedReader br = new BufferedReader(fr);
         while ((read = br.readLine()) != null)
         {
@@ -29,7 +29,7 @@ public class Fileopds
             }
         }
         logger.log(Level.INFO,()->""+hmap.clone());
-        logger.info("Total No of Words in the File"+count);
+        logger.info("Total No of Words in the File "+count);
         queue.addAll(hmap.entrySet());
         for(Map.Entry<String, Integer> que:queue) {
             logger.info(que.getKey() + " =>" + que.getValue() + " \n");
