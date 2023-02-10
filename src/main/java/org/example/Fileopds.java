@@ -7,7 +7,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 public class Fileopds
 {
-    Logger logger=Logger.getLogger("com-api-jar");
     public static void main(String[] args) throws IOException {
         Logger logger=Logger.getLogger("com-api-jar");
         String read;
@@ -29,7 +28,8 @@ public class Fileopds
             }
         }
         logger.log(Level.INFO,()->""+hmap.clone());
-        logger.info("Total No of Words in the File "+count);
+        logger.info("Total number of words in the file :");
+        logger.log(Level.INFO,Integer.toString(count),count);
         queue.addAll(hmap.entrySet());
         for(Map.Entry<String, Integer> que:queue) {
             logger.info(que.getKey() + " =>" + que.getValue() + " \n");
